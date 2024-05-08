@@ -1,0 +1,50 @@
+body {
+    font-family:"ABC Diatype Mono", monospace;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+a {
+    color: inherit; /* Menggunakan warna default dari induknya */
+    text-decoration: none; /* Menghapus garis bawah tautan */
+}
+
+a:hover {
+    color: inherit; /* Warna saat dihover sama dengan warna default */
+}
+
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    background-color: #333333;
+}
+
+#themeIcon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.rotate-icon {
+    transform: rotate(180deg);
+}
