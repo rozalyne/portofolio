@@ -65,3 +65,17 @@ a:hover {
     width: 4px;
     background-color: #ff4081; /* Warna pink */
 }
+.image-profile {
+    width: 150px; /* Sesuaikan ukuran gambar bulat sesuai kebutuhan Anda */
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    overflow: hidden; /* Menghilangkan bagian gambar yang tidak muat dalam lingkaran */
+    margin: 0 auto 20px; /* Menengahkan gambar dan menambahkan jarak 20px di bagian bawah */
+    display: block; /* Agar margin auto berfungsi, gambar perlu menjadi elemen blok */
+}
+
+/* Contoh styling untuk gambar */
+.image-profile img {
+    width: 100%; /* Agar gambar sesuai dengan lingkaran */
+    height: auto; /* Agar gambar tidak terdistorsi */
+}
