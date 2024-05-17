@@ -1,5 +1,5 @@
 body {
-    font-family:"ABC Diatype Mono", monospace;
+    font-family: "ABC Diatype Mono", monospace;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
@@ -8,6 +8,7 @@ body {
 .navbar-brand {
     font-size: 1.5rem;
 }
+
 a {
     color: inherit; /* Menggunakan warna default dari induknya */
     text-decoration: none; /* Menghapus garis bawah tautan */
@@ -16,7 +17,6 @@ a {
 a:hover {
     color: inherit; /* Warna saat dihover sama dengan warna default */
 }
-
 
 .card {
     margin-bottom: 20px;
@@ -47,4 +47,21 @@ a:hover {
 
 .rotate-icon {
     transform: rotate(180deg);
+}
+
+/* CSS untuk garis vertikal pink */
+.vertical-line {
+    position: relative;
+    padding-left: 20px; /* Memberi ruang untuk garis vertikal */
+    margin-left: 20px;
+}
+
+.vertical-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #ff4081; /* Warna pink */
 }

@@ -29,10 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener untuk tombol toggle tema
     themeToggleBtn.addEventListener('click', toggleTheme);
 
-    // Inisialisasi tema berdasarkan local storage (opsional)
+    // Inisialisasi tema berdasarkan local storage
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        toggleTheme(); // Terapkan dark mode jika tema sebelumnya dark
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        themeIcon.src = 'sun.png';
+    } else if (savedTheme === 'dark' || body.classList.contains('dark-mode')) {
+        body.classList.add('dark-mode'); // Default to dark mode if no theme is saved or theme is 'dark'
+        themeIcon.src = 'moon.png';
     }
 
     // Event listener untuk efek hover pada kartu (card)
