@@ -52,3 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+    $('#certificationCarousel').carousel({
+        interval: 3000,  // Carousel interval in milliseconds
+        wrap: true       // Whether the carousel should cycle continuously or have hard stops
+    });
+});
