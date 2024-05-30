@@ -100,7 +100,7 @@
                         <div class="carousel-item active">
                             <img src="img/softwareengineering.PNG" class="d-block w-100" alt="Certification 1">
                             <div class="carousel-caption text-dark">
-                                <p class="text-center"><a href="https://www.dicoding.com/certificates/N9ZO6RE60XG5">Beginner Software Engineering</a></p>
+                                <p class="text-center"><a href="#">Beginner Software Engineering</a></p>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -138,6 +138,24 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            </section>
+            <section class="container mt-5">
+                <h2>Kirim Email</h2>
+                <form action="send_email.php" method="post">
+                    <div class="form-group">
+                        <label for="email">Alamat Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek:</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim</button>
+                </form>
             </section>
             
             
