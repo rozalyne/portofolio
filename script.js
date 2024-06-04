@@ -58,3 +58,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
         wrap: true       // Whether the carousel should cycle continuously or have hard stops
     });
 });
+// JavaScript to enhance carousel functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    function showNextItem() {
+        carouselItems[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        carouselItems[currentIndex].classList.add('active');
+    }
+
+    function showPrevItem() {
+        carouselItems[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+        carouselItems[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextItem, 5000); // Change slide every 5 seconds
+
+    // Optional: Add event listeners for previous/next buttons
+    document.querySelector('.carousel-control-next').addEventListener('click', showNextItem);
+    document.querySelector('.carousel-control-prev').addEventListener('click', showPrevItem);
+});

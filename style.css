@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: "ABC Diatype Mono", monospace;
     margin: 0;
@@ -5,56 +6,61 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Navbar */
 .navbar-brand {
     font-size: 1.5rem;
 }
 
+/* Links */
 a {
-    color: inherit; /* Menggunakan warna default dari induknya */
-    text-decoration: none; /* Menghapus garis bawah tautan */
+    color: inherit;
+    text-decoration: none;
 }
-
 a:hover {
-    color: inherit; /* Warna saat dihover sama dengan warna default */
+    color: inherit;
 }
 
+/* Cards */
 .card {
     margin-bottom: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid transparent;
     cursor: pointer;
 }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
 
+/* Light and Dark Mode */
 .light-mode {
     background-color: #ffffff;
     color: #000000;
 }
-
 .dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
 }
-
 .dark-mode .card {
     background-color: #333333;
 }
 
+/* Theme Icon */
 #themeIcon {
     width: 20px;
     height: 20px;
     transition: transform 0.3s;
 }
-
 .rotate-icon {
     transform: rotate(180deg);
 }
 
+/* Vertical Line */
 .vertical-line {
     position: relative;
-    padding-left: 20px; /* Memberi ruang untuk garis vertikal */
+    padding-left: 20px;
     margin-left: 20px;
 }
-
 .vertical-line::before {
     content: '';
     position: absolute;
@@ -62,36 +68,69 @@ a:hover {
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: #ff4081; /* Warna pink */
+    background-color: #ff4081;
 }
 
+/* Profile Image */
 .image-profile {
-    width: 150px; /* Sesuaikan ukuran gambar bulat sesuai kebutuhan Anda */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Membuat gambar menjadi bulat */
-    overflow: hidden; /* Menghilangkan bagian gambar yang tidak muat dalam lingkaran */
-    margin: 0 auto 20px; /* Menengahkan gambar dan menambahkan jarak 20px di bagian bawah */
-    display: block; /* Agar margin auto berfungsi, gambar perlu menjadi elemen blok */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    display: block;
 }
-
 .image-profile img {
-    width: 100%; /* Agar gambar sesuai dengan lingkaran */
-    height: auto; /* Agar gambar tidak terdistorsi */
+    width: 100%;
+    height: auto;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-}
-
+/* Carousel */
 .carousel-item {
     height: 600px;
     background-color: #333;
     color: white;
+    transition: transform 0.5s ease-in-out;
 }
-
 .carousel-item img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .image-profile {
+        width: 100px;
+        height: 100px;
+    }
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+/* Enhanced Button Styles */
+button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+button:hover {
+    background-color: #e63770;
+    transform: scale(1.05);
+}
+
+/* Smooth Scroll for Anchors */
+html {
+    scroll-behavior: smooth;
 }
