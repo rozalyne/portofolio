@@ -134,3 +134,7 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+    /* Tambahkan margin antara ikon-ikon */
+    .social-icons li {
+        margin-right: 20px; /* Sesuaikan dengan jarak yang diinginkan */
+      }
